@@ -1,0 +1,40 @@
+.combo {
+  padding: adaptiv-prop(100, 40) 0;
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 25%;
+    background: #415167;
+  }
+}
+
+.combo-container {
+  @include container-fix
+}
+
+.combo-item {
+  background: #fff;
+  border: rgba(21, 29, 40, .0470588235) 2px solid;
+  transition: all .3s ease-in-out;
+}
+
+.combo-item__head {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: $tertiary;
+}
+
+.combo-container__subtitle {
+  @include subtitle
+}
+
+.combo-container__title {
+  @include title
+}

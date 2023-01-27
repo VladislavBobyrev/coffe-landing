@@ -1,0 +1,120 @@
+.header {
+  position: sticky;
+  top: 0;
+  backdrop-filter: blur(25px);
+  background: #edf0f570;
+  box-shadow: -5px -5px 15px $primary;
+  z-index: 3;
+}  
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: adaptiv-prop(20, 10) 0;
+  }
+
+  .header__container {
+    @include container-fix;
+  }
+
+  .header-container__burger {
+    display: block;
+    position: relative;
+    width: 36px;
+    height: 25px;
+
+  }
+
+  .header-burger {
+    cursor: pointer;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    background-color:transparent;
+    display: flex;
+    z-index: 3;
+  }
+
+  @mixin burger {
+    content: "";
+    position: absolute;
+    height: 3px;
+    background-color: $primary;
+    width: 100%;
+    transition: all 0.4s ease-in-out;
+  }
+
+  .header-container__burger::before {
+    @include burger;
+    top: 0;
+  }
+
+  .header-container__burger::after {
+    @include burger;
+    bottom: 0;
+  }
+
+  .header-burger__span {
+    @include burger;
+    top: 11px;
+  }
+
+  .header-burger--active::before {
+    transform: rotate(45deg);
+    top: 11px;
+    background-color: $tertiary;
+    z-index: 2;
+  }
+
+  .header-burger__span--active {
+    transform: scale(0);
+  }
+
+  .header-burger--active:after {
+    transform: rotate(-45deg);
+    bottom: 11px;
+    background-color: $tertiary;
+    z-index: 2;
+  }
+
+  .header-container__nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 1;
+    transform: translateX(100%);
+  }
+
+  .nav {
+    width: 100vw;
+    background: $primary;
+    padding: 200px 20px;
+    transition: 0.3s;
+    height: 100vh;
+    transform: scale(0);
+  }
+
+  .nav--active {
+    transform: translateX(0) scale(1);
+  }
+
+  .nav-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+  }
+
+  .nav__list {}
+
+  .nav-list__link {
+    color: $tertiary;
+    text-transform: uppercase;
+    font-size: adaptiv-prop(32, 18);
+    line-height: 150%;
+
+    &:hover {
+      color: $brand;
+    }
+  }

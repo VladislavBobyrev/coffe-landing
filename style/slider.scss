@@ -1,0 +1,28 @@
+/* the slides */
+.slick-slide {
+  margin: 0 2rem;
+}
+
+ul.slick-dots{
+  bottom: -50px; 
+}
+ul.slick-dots li button {
+  background: $brand-800 ;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+}
+
+ul li.slick-active button {
+  background: $primary ;
+  width: 10px;
+  height: 10px;
+}
+
+ul.slick-dots li button:before  {
+  content: none;
+}
+
+.slick-prev:before, .slick-next:before  {
+  display: none;
+}

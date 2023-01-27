@@ -1,0 +1,45 @@
+.banner {
+  background-image: url(../image/banner-bg.jpg);
+  background-repeat: no-repeat;
+  background-position: 50% 0%;
+  background-size: contain;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 25%;
+    z-index: -1;
+    background: $tertiary;
+  }
+}
+
+.banner-container {
+  @include container-fix;
+  height: 70vh;
+  position: relative;
+}
+
+.banner-container__title {
+  position: absolute;
+  bottom: 30%;
+  left: 0;
+  font-size: adaptiv-prop(54, 36);
+  font-weight: 700;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.banner-title__span {
+  color: $primary;
+  background: $tertiary;
+}
+
+.banner-title__span--accent {
+  color: $tertiary;
+  background: $brand-800;
+}

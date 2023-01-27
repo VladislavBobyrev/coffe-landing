@@ -1,0 +1,82 @@
+.page {
+  font-family: Nunito;
+  margin: 0;
+  background: $bg-body;
+}
+
+.html-hidden {
+  overflow: hidden;
+}
+
+@mixin container-fix {
+  margin: 0 auto;
+  max-width: adaptiv-prop(1440, 280);
+  width: 100%;
+}
+
+@mixin subtitle {
+  font-family: 'Montserrat';
+  font-weight: 600;
+  font-size: adaptiv-prop(24, 18);
+  line-height: 120%;
+  color: $primary;
+  margin-bottom: adaptiv-prop(8, 6);
+  text-align: center;
+}
+
+@mixin title{
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 900;
+  font-size: adaptiv-prop(30, 20);
+  line-height: 110%;
+  color: $primary;
+  text-align: center;
+  margin-bottom: adaptiv-prop(75, 80);
+}
+
+@mixin button {
+  position: relative;
+  font-weight: 700;
+  line-height: 150%;
+  color: $secondary;
+  text-transform: uppercase;
+  border:0;
+  background: transparent;
+  cursor: pointer;
+}
+
+@mixin button--brand-light {
+  &::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #C7A17A;
+    left: 0;
+    bottom: 0;
+    transition: all 0.3s ease-in-out;
+  }
+
+  &:hover:after {
+    width: 100%;
+  }
+}
+
+@mixin button--brand {
+  font-weight: 700;
+  font-size: 18;
+  line-height:150%;
+  color: $tertiary;
+  padding: 6px 17px;
+  background: $brand-800;
+  border-radius: 19px;
+  text-transform: uppercase;
+  display: inline-block;
+  transition: all 0.3s ease-in-out;
+
+
+  &:hover {
+    transform: translateY(-5px);
+  }
+}

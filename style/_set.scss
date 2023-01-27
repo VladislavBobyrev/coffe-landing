@@ -1,0 +1,101 @@
+.set {
+  position: relative;
+
+  &::before {
+    content:'';
+    position: absolute;
+    left: 25%;
+    top: 0;
+    bottom: 0;
+    width: 75%;
+    background: $tertiary;
+  }
+}
+.set__container {
+  @include container-fix
+}
+
+.set-container {
+  position: relative;
+  padding: adaptiv-prop(100, 40) 0;
+}
+
+.set-container__subtitle {
+  @include subtitle
+}
+
+.set-container__title {
+  @include title
+}
+
+.set-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media all and (max-width: 920px) {
+    flex-direction: column;
+  }
+}
+.set-card__body {
+  background: #fff;
+  padding: 65px 65px 65px 300px;
+  margin-left: -300px;
+  box-shadow: -1px -1px 16px rgba(0, 0, 0, 0.263);
+
+  @media all and (max-width: 920px) {
+    margin-left: 0;
+    padding: 35px;
+  }
+}
+
+.set-card__image {
+  position: relative;
+  z-index: 1;
+
+  @media all and (max-width: 700px) {
+    max-width: 280px;
+  }
+}
+.set-card__box {
+  display: flex;
+  justify-content: space-between;
+}
+
+.set-card-box__button  {
+  @include button
+}
+
+.set-card-box__button--brand-light {
+@include button--brand-light
+}
+
+.set-card-box__button--brand{
+  @include button--brand
+}
+
+.set-card__price {
+  font-weight: 600;
+  font-size: adaptiv-prop(20, 16);
+  line-height: 120%;
+  color: $brand-800;
+  margin-bottom: 0.5rem;
+}
+
+
+.set-card__title {
+  font-weight: 700;
+  font-size: adaptiv-prop(28, 20);
+  line-height: 150%;
+  color: $secondary;
+  margin-bottom: 8rem;
+
+  @media all and (max-width: 920px) {
+    margin-bottom: 4rem;
+  }
+}
+
+.set-card__description {
+  line-height: 120%;
+  margin-bottom: 4rem;
+}

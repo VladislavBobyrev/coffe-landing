@@ -1,0 +1,17 @@
+.footer__container {
+  @include container-fix;
+}
+
+.footer {
+  padding: adaptiv-prop(20, 10) 0;
+  box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.231);
+  background: #c7a07a50;
+}
+
+
+.footer-container__title {
+  text-align: center;
+  font-weight: 700;
+  font-size: 18px;
+  color: $primary;
+}
